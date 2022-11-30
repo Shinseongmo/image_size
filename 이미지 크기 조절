@@ -1,0 +1,8 @@
+from PIL import Image
+import glob
+file_path ="" #'파일 위치를 입력하고 \ 는 /로 고쳐주세요!"
+list_images= glob.glob(file_path + '*.png')
+for image in list_images:
+    img = Image.open(image)
+    img_resized = img.resize((224,224))
+    img_resized.save(image+".png")
