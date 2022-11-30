@@ -1,8 +1,12 @@
 from PIL import Image
 import glob
-file_path ="" #'파일 위치를 입력하고 \ 는 /로 고쳐주세요!"
+add=input("파일 위치를 입력하고 \ 는 /로 고쳐주세요!: ")
+size=int(input("사이즈를 입력해주세요 ex) 사이즈: a X b중 a: "))
+size1=int(input("사이즈를 입력해주세요 ex) 사이즈: a X b중 b: "))
+file_path ="{}".format(add)
 list_images= glob.glob(file_path + '*.png')
 for image in list_images:
     img = Image.open(image)
-    img_resized = img.resize((224,224))
+    img_resized = img.resize((size,size1))
     img_resized.save(image+".png")
+print("완료되었습니다!")
