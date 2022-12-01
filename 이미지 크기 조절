@@ -1,6 +1,7 @@
 from PIL import Image
 import glob
-add=input("파일 위치를 입력하고 \ 는 /로 고쳐주세요!: ")
+print("파일위치는 파일탐색기에서 해당 폴더 위치를 복사합니다")
+add=input("파일 위치를 C:는 제외하여 입력하고 \ 는 /로 고쳐주세요!: ")
 size=int(input("사이즈를 입력해주세요 ex) 사이즈: a X b중 a: "))
 size1=int(input("사이즈를 입력해주세요 ex) 사이즈: a X b중 b: "))
 file_path ="{}".format(add)
